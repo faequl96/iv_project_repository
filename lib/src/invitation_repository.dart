@@ -6,51 +6,27 @@ class InvitationRepository {
 
   final InvitationService _invitationService;
 
-  Future<InvitationResponse> createInvitation(CreateInvitationRequest request) async {
-    try {
-      return await _invitationService.createInvitation(request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<InvitationResponse> createInvitation(CreateInvitationRequest request) {
+    return _invitationService.createInvitation(request);
   }
 
-  Future<InvitationResponse> getInvitationById(int id) async {
-    try {
-      return await _invitationService.getInvitationById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<InvitationResponse> getInvitationById(int id) {
+    return _invitationService.getInvitationById(id);
   }
 
-  Future<List<InvitationResponse>> getInvitations() async {
-    try {
-      return await _invitationService.getInvitations();
-    } on ApiException {
-      rethrow;
-    }
+  Future<List<InvitationResponse>> getInvitations() {
+    return _invitationService.getInvitations();
   }
 
-  Future<List<InvitationResponse>> getInvitationsByUserId(String userId) async {
-    try {
-      return await _invitationService.getInvitationsByUserId(userId);
-    } on ApiException {
-      rethrow;
-    }
+  Future<List<InvitationResponse>> getInvitationsByUserId(String userId) {
+    return _invitationService.getInvitationsByUserId(userId);
   }
 
-  Future<InvitationResponse> updateInvitationById(int id, UpdateInvitationRequest request) async {
-    try {
-      return await _invitationService.updateInvitationById(id, request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<InvitationResponse> updateInvitationById(int id, UpdateInvitationRequest request) {
+    return _invitationService.updateInvitationById(id, request);
   }
 
-  Future<void> deleteInvitationById(int id) async {
-    try {
-      await _invitationService.deleteInvitationById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<void> deleteInvitationById(int id) {
+    return _invitationService.deleteInvitationById(id);
   }
 }

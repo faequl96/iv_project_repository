@@ -7,19 +7,11 @@ class InvitationDataRepository {
 
   final InvitationDataService _invitationDataService;
 
-  Future<InvitationDataResponse> getInvitationDataById(int id) async {
-    try {
-      return await _invitationDataService.getInvitationDataById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<InvitationDataResponse> getInvitationDataById(int id) {
+    return _invitationDataService.getInvitationDataById(id);
   }
 
-  Future<InvitationDataResponse> updateInvitationDataById(int id, UpdateInvitationDataRequest request) async {
-    try {
-      return await _invitationDataService.updateInvitationDataById(id, request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<InvitationDataResponse> updateInvitationDataById(int id, UpdateInvitationDataRequest request) {
+    return _invitationDataService.updateInvitationDataById(id, request);
   }
 }

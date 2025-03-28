@@ -6,35 +6,19 @@ class VoucherCodeRepository {
 
   final VoucherCodeService _voucherCodeService;
 
-  Future<VoucherCodeResponse> createVoucherCode(VoucherCodeRequest request) async {
-    try {
-      return await _voucherCodeService.createVoucherCode(request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<VoucherCodeResponse> createVoucherCode(VoucherCodeRequest request) {
+    return _voucherCodeService.createVoucherCode(request);
   }
 
-  Future<VoucherCodeResponse> getVoucherCodeById(int id) async {
-    try {
-      return await _voucherCodeService.getVoucherCodeById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<VoucherCodeResponse> getVoucherCodeById(int id) {
+    return _voucherCodeService.getVoucherCodeById(id);
   }
 
-  Future<VoucherCodeResponse> updateVoucherCodeById(int id, VoucherCodeRequest request) async {
-    try {
-      return await _voucherCodeService.updateVoucherCodeById(id, request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<VoucherCodeResponse> updateVoucherCodeById(int id, VoucherCodeRequest request) {
+    return _voucherCodeService.updateVoucherCodeById(id, request);
   }
 
-  Future<void> deleteVoucherCodeById(int id) async {
-    try {
-      return await _voucherCodeService.deleteVoucherCodeById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<void> deleteVoucherCodeById(int id) {
+    return _voucherCodeService.deleteVoucherCodeById(id);
   }
 }

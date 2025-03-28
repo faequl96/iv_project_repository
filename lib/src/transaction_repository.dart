@@ -6,51 +6,27 @@ class TransactionRepository {
 
   final TransactionService _transactionService;
 
-  Future<TransactionResponse> createTransaction(CreateTransactionRequest request) async {
-    try {
-      return await _transactionService.createTransaction(request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<TransactionResponse> createTransaction(CreateTransactionRequest request) {
+    return _transactionService.createTransaction(request);
   }
 
-  Future<TransactionResponse> getTransactionById(int id) async {
-    try {
-      return await _transactionService.getTransactionById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<TransactionResponse> getTransactionById(int id) {
+    return _transactionService.getTransactionById(id);
   }
 
-  Future<List<TransactionResponse>> getTransactions() async {
-    try {
-      return await _transactionService.getTransactions();
-    } on ApiException {
-      rethrow;
-    }
+  Future<List<TransactionResponse>> getTransactions() {
+    return _transactionService.getTransactions();
   }
 
-  Future<List<TransactionResponse>> getTransactionsByUserId(String userId) async {
-    try {
-      return await _transactionService.getTransactionsByUserId(userId);
-    } on ApiException {
-      rethrow;
-    }
+  Future<List<TransactionResponse>> getTransactionsByUserId(String userId) {
+    return _transactionService.getTransactionsByUserId(userId);
   }
 
-  Future<TransactionResponse> updateTransactionById(int id, UpdateTransactionRequest request) async {
-    try {
-      return await _transactionService.updateTransactionById(id, request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<TransactionResponse> updateTransactionById(int id, UpdateTransactionRequest request) {
+    return _transactionService.updateTransactionById(id, request);
   }
 
-  Future<void> deleteTransactionById(int id) async {
-    try {
-      return await _transactionService.deleteTransactionById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<void> deleteTransactionById(int id) {
+    return _transactionService.deleteTransactionById(id);
   }
 }

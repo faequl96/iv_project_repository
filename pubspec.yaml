@@ -1,6 +1,6 @@
 name: iv_project_repository
 description: "IV Project Repository"
-version: 0.0.3
+version: 0.0.4
 homepage:
 publish_to: none
 
@@ -26,7 +26,9 @@ dependencies:
   iv_project_api:
     git:
       url: https://github.com/faequl96/iv_project_api.git
-      ref: 0.0.2
+      ref: 0.0.3
+
+  firebase_auth: ^5.5.1
 
 dev_dependencies:
   flutter_test:

@@ -6,51 +6,27 @@ class ReviewRepository {
 
   final ReviewService _reviewService;
 
-  Future<ReviewResponse> createReview(CreateReviewRequest request) async {
-    try {
-      return await _reviewService.createReview(request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<ReviewResponse> createReview(CreateReviewRequest request) {
+    return _reviewService.createReview(request);
   }
 
-  Future<ReviewResponse> getReviewById(int id) async {
-    try {
-      return await _reviewService.getReviewById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<ReviewResponse> getReviewById(int id) {
+    return _reviewService.getReviewById(id);
   }
 
-  Future<List<ReviewResponse>> getReviews() async {
-    try {
-      return await _reviewService.getReviews();
-    } on ApiException {
-      rethrow;
-    }
+  Future<List<ReviewResponse>> getReviews() {
+    return _reviewService.getReviews();
   }
 
-  Future<List<ReviewResponse>> getReviewsByInvitationThemeId(int invitationThemeId) async {
-    try {
-      return await _reviewService.getReviewsByInvitationThemeId(invitationThemeId);
-    } on ApiException {
-      rethrow;
-    }
+  Future<List<ReviewResponse>> getReviewsByInvitationThemeId(int invitationThemeId) {
+    return _reviewService.getReviewsByInvitationThemeId(invitationThemeId);
   }
 
-  Future<ReviewResponse> updateReviewById(int id, UpdateReviewRequest request) async {
-    try {
-      return await _reviewService.updateReviewById(id, request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<ReviewResponse> updateReviewById(int id, UpdateReviewRequest request) {
+    return _reviewService.updateReviewById(id, request);
   }
 
-  Future<void> deleteReviewById(int id) async {
-    try {
-      return await _reviewService.deleteReviewById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<void> deleteReviewById(int id) {
+    return _reviewService.deleteReviewById(id);
   }
 }

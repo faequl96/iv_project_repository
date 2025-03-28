@@ -6,11 +6,7 @@ class DiscountRepository {
 
   final DiscountService _discountService;
 
-  Future<DiscountResponse> setProductPrices(DiscountRequest request) async {
-    try {
-      return await _discountService.setProductPrices(request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<DiscountResponse> setProductPrices(DiscountRequest request) {
+    return _discountService.setProductPrices(request);
   }
 }

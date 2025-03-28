@@ -6,43 +6,23 @@ class IVCoinPackageRepository {
 
   final IVCoinPackageService _ivCoinPackageService;
 
-  Future<IVCoinPackageResponse> createIVCoinPackage(CreateIVCoinPackageRequest request) async {
-    try {
-      return await _ivCoinPackageService.createIVCoinPackage(request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<IVCoinPackageResponse> createIVCoinPackage(CreateIVCoinPackageRequest request) {
+    return _ivCoinPackageService.createIVCoinPackage(request);
   }
 
-  Future<IVCoinPackageResponse> getIVCoinPackageById(int id) async {
-    try {
-      return await _ivCoinPackageService.getIVCoinPackageById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<IVCoinPackageResponse> getIVCoinPackageById(int id) {
+    return _ivCoinPackageService.getIVCoinPackageById(id);
   }
 
-  Future<List<IVCoinPackageResponse>> getIVCoinPackages() async {
-    try {
-      return await _ivCoinPackageService.getIVCoinPackages();
-    } on ApiException {
-      rethrow;
-    }
+  Future<List<IVCoinPackageResponse>> getIVCoinPackages() {
+    return _ivCoinPackageService.getIVCoinPackages();
   }
 
-  Future<IVCoinPackageResponse> updateIVCoinPackageById(int id, UpdateIVCoinPackageRequest request) async {
-    try {
-      return await _ivCoinPackageService.updateIVCoinPackageById(id, request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<IVCoinPackageResponse> updateIVCoinPackageById(int id, UpdateIVCoinPackageRequest request) {
+    return _ivCoinPackageService.updateIVCoinPackageById(id, request);
   }
 
-  Future<void> deleteIVCoinPackageById(int id) async {
-    try {
-      await _ivCoinPackageService.deleteIVCoinPackageById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<void> deleteIVCoinPackageById(int id) {
+    return _ivCoinPackageService.deleteIVCoinPackageById(id);
   }
 }

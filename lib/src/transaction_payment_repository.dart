@@ -7,11 +7,7 @@ class TransactionPaymentRepository {
 
   final TransactionPaymentService _transactionPaymentService;
 
-  Future<TransactionResponse> issueById(int id) async {
-    try {
-      return await _transactionPaymentService.issueById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<TransactionResponse> issueById(int id) {
+    return _transactionPaymentService.issueById(id);
   }
 }

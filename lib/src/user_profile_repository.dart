@@ -6,35 +6,19 @@ class UserProfileRepository {
 
   final UserProfileService _userProfileService;
 
-  Future<UserProfileResponse> getUserProfile() async {
-    try {
-      return await _userProfileService.getUserProfile();
-    } on ApiException {
-      rethrow;
-    }
+  Future<UserProfileResponse> getUserProfile() {
+    return _userProfileService.getUserProfile();
   }
 
-  Future<UserProfileResponse> getUserProfileById(int id) async {
-    try {
-      return await _userProfileService.getUserProfileById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<UserProfileResponse> getUserProfileById(int id) {
+    return _userProfileService.getUserProfileById(id);
   }
 
-  Future<UserProfileResponse> updateUserProfile(UserProfileRequest request) async {
-    try {
-      return await _userProfileService.updateUserProfile(request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<UserProfileResponse> updateUserProfile(UserProfileRequest request) {
+    return _userProfileService.updateUserProfile(request);
   }
 
-  Future<UserProfileResponse> updateUserProfileById(int id, UserProfileRequest request) async {
-    try {
-      return await _userProfileService.updateUserProfileById(id, request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<UserProfileResponse> updateUserProfileById(int id, UserProfileRequest request) {
+    return _userProfileService.updateUserProfileById(id, request);
   }
 }

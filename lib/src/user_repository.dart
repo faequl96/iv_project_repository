@@ -6,51 +6,27 @@ class UserRepository {
 
   final UserService _userService;
 
-  Future<UserResponse> getUser() async {
-    try {
-      return await _userService.getUser();
-    } on ApiException {
-      rethrow;
-    }
+  Future<UserResponse> getUser() {
+    return _userService.getUser();
   }
 
-  Future<UserResponse> getUserById(String id) async {
-    try {
-      return await _userService.getUserById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<UserResponse> getUserById(String id) {
+    return _userService.getUserById(id);
   }
 
-  Future<List<UserResponse>> getUsers() async {
-    try {
-      return await _userService.getUsers();
-    } on ApiException {
-      rethrow;
-    }
+  Future<List<UserResponse>> getUsers() {
+    return _userService.getUsers();
   }
 
-  Future<UserResponse> updateUserById(String id, UserRequest request) async {
-    try {
-      return await _userService.updateUserById(id, request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<UserResponse> updateUserById(String id, UserRequest request) {
+    return _userService.updateUserById(id, request);
   }
 
-  Future<void> deleteUser() async {
-    try {
-      await _userService.deleteUser();
-    } on ApiException {
-      rethrow;
-    }
+  Future<void> deleteUser() {
+    return _userService.deleteUser();
   }
 
-  Future<void> deleteUserById(String id) async {
-    try {
-      await _userService.deleteUserById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<void> deleteUserById(String id) {
+    return _userService.deleteUserById(id);
   }
 }

@@ -6,43 +6,23 @@ class CategoryRepository {
 
   final CategoryService _categoryService;
 
-  Future<CategoryResponse> createCategory(CategoryRequest request) async {
-    try {
-      return await _categoryService.createCategory(request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<CategoryResponse> createCategory(CategoryRequest request) {
+    return _categoryService.createCategory(request);
   }
 
-  Future<CategoryResponse> getCategoryById(int id) async {
-    try {
-      return await _categoryService.getCategoryById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<CategoryResponse> getCategoryById(int id) {
+    return _categoryService.getCategoryById(id);
   }
 
-  Future<List<CategoryResponse>> getCategories() async {
-    try {
-      return await _categoryService.getCategories();
-    } on ApiException {
-      rethrow;
-    }
+  Future<List<CategoryResponse>> getCategories() {
+    return _categoryService.getCategories();
   }
 
-  Future<CategoryResponse> updateCategoryById(int id, CategoryRequest request) async {
-    try {
-      return await _categoryService.updateCategoryById(id, request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<CategoryResponse> updateCategoryById(int id, CategoryRequest request) {
+    return _categoryService.updateCategoryById(id, request);
   }
 
-  Future<void> deleteCategoryById(int id) async {
-    try {
-      await _categoryService.deleteCategoryById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<void> deleteCategoryById(int id) {
+    return _categoryService.deleteCategoryById(id);
   }
 }

@@ -7,11 +7,7 @@ class TransactionConfirmationRepository {
 
   final TransactionConfirmationService _transactionConfirmationService;
 
-  Future<TransactionResponse> manualByAdminById(int id) async {
-    try {
-      return await _transactionConfirmationService.manualByAdminById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<TransactionResponse> manualByAdminById(int id) {
+    return _transactionConfirmationService.manualByAdminById(id);
   }
 }

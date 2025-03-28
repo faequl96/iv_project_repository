@@ -6,27 +6,15 @@ class IVCoinRepository {
 
   final IVCoinService _ivCoinService;
 
-  Future<IVCoinResponse> getIVCoin() async {
-    try {
-      return await _ivCoinService.getIVCoin();
-    } on ApiException {
-      rethrow;
-    }
+  Future<IVCoinResponse> getIVCoin() {
+    return _ivCoinService.getIVCoin();
   }
 
-  Future<IVCoinResponse> getIVCoinById(int id) async {
-    try {
-      return await _ivCoinService.getIVCoinById(id);
-    } on ApiException {
-      rethrow;
-    }
+  Future<IVCoinResponse> getIVCoinById(int id) {
+    return _ivCoinService.getIVCoinById(id);
   }
 
-  Future<IVCoinResponse> updateIVCoinById(int id, IVCoinRequest request) async {
-    try {
-      return await _ivCoinService.updateIVCoinById(id, request);
-    } on ApiException {
-      rethrow;
-    }
+  Future<IVCoinResponse> updateIVCoinById(int id, IVCoinRequest request) {
+    return _ivCoinService.updateIVCoinById(id, request);
   }
 }

@@ -7,10 +7,6 @@ class AdMobRepository {
   final AdMobService _adMobService;
 
   Future<IVCoinResponse> addExtraIVCoins() async {
-    try {
-      return await _adMobService.addExtraIVCoins();
-    } on ApiException {
-      rethrow;
-    }
+    return _adMobService.addExtraIVCoins();
   }
 }
