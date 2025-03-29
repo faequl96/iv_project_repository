@@ -2,9 +2,7 @@ import 'package:iv_project_api/iv_project_api.dart';
 import 'package:iv_project_model/iv_project_model.dart';
 
 class CategoryRepository {
-  CategoryRepository({required CategoryService categoryService}) : _categoryService = categoryService;
-
-  final CategoryService _categoryService;
+  final CategoryService _categoryService = CategoryService();
 
   Future<CategoryResponse> createCategory(CategoryRequest request) {
     return _categoryService.createCategory(request);

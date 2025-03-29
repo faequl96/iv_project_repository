@@ -2,9 +2,7 @@ import 'package:iv_project_api/iv_project_api.dart';
 import 'package:iv_project_model/iv_project_model.dart';
 
 class InvitationRepository {
-  InvitationRepository({required InvitationService invitationService}) : _invitationService = invitationService;
-
-  final InvitationService _invitationService;
+  final InvitationService _invitationService = InvitationService();
 
   Future<InvitationResponse> createInvitation(CreateInvitationRequest request) {
     return _invitationService.createInvitation(request);

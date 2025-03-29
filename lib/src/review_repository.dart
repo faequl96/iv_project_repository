@@ -2,9 +2,7 @@ import 'package:iv_project_api/iv_project_api.dart';
 import 'package:iv_project_model/iv_project_model.dart';
 
 class ReviewRepository {
-  ReviewRepository({required ReviewService reviewService}) : _reviewService = reviewService;
-
-  final ReviewService _reviewService;
+  final ReviewService _reviewService = ReviewService();
 
   Future<ReviewResponse> createReview(CreateReviewRequest request) {
     return _reviewService.createReview(request);

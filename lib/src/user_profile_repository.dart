@@ -2,9 +2,7 @@ import 'package:iv_project_api/iv_project_api.dart';
 import 'package:iv_project_model/iv_project_model.dart';
 
 class UserProfileRepository {
-  UserProfileRepository({required UserProfileService userProfileService}) : _userProfileService = userProfileService;
-
-  final UserProfileService _userProfileService;
+  final UserProfileService _userProfileService = UserProfileService();
 
   Future<UserProfileResponse> getUserProfile() {
     return _userProfileService.getUserProfile();

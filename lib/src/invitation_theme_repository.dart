@@ -2,10 +2,7 @@ import 'package:iv_project_api/iv_project_api.dart';
 import 'package:iv_project_model/iv_project_model.dart';
 
 class InvitationThemeRepository {
-  InvitationThemeRepository({required InvitationThemeService invitationThemeService})
-    : _invitationThemeService = invitationThemeService;
-
-  final InvitationThemeService _invitationThemeService;
+  final InvitationThemeService _invitationThemeService = InvitationThemeService();
 
   Future<InvitationThemeResponse> createInvitationTheme(CreateInvitationThemeRequest request) {
     return _invitationThemeService.createInvitationTheme(request);

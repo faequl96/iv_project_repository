@@ -2,9 +2,7 @@ import 'package:iv_project_api/iv_project_api.dart';
 import 'package:iv_project_model/iv_project_model.dart';
 
 class TransactionRepository {
-  TransactionRepository({required TransactionService transactionService}) : _transactionService = transactionService;
-
-  final TransactionService _transactionService;
+  final TransactionService _transactionService = TransactionService();
 
   Future<TransactionResponse> createTransaction(CreateTransactionRequest request) {
     return _transactionService.createTransaction(request);

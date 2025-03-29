@@ -2,9 +2,7 @@ import 'package:iv_project_api/iv_project_api.dart';
 import 'package:iv_project_model/iv_project_model.dart';
 
 class UserRepository {
-  UserRepository({required UserService userService}) : _userService = userService;
-
-  final UserService _userService;
+  final UserService _userService = UserService();
 
   Future<UserResponse> getUser() {
     return _userService.getUser();

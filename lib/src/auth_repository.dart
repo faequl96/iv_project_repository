@@ -3,9 +3,7 @@ import 'package:iv_project_api/iv_project_api.dart';
 import 'package:iv_project_model/iv_project_model.dart';
 
 class AuthRepository {
-  AuthRepository({required AuthService authService}) : _authService = authService;
-
-  final AuthService _authService;
+  final AuthService _authService = AuthService();
 
   Future<AuthResponse> login(LoginAuthRequest request) {
     return _authService.login(request);
@@ -17,5 +15,17 @@ class AuthRepository {
 
   Future<User> signInWithEmailAndPassword(String email, String password) {
     return _authService.signInWithEmailAndPassword(email, password);
+  }
+
+  Future<void> createUserWithEmailAndPassword(String email, String password) {
+    return _authService.createUserWithEmailAndPassword(email, password);
+  }
+
+  Future<void> sendPasswordResetEmail(String email) {
+    return _authService.sendPasswordResetEmail(email);
+  }
+
+  Future<void> signOut() {
+    return _authService.signOut();
   }
 }

@@ -2,9 +2,7 @@ import 'package:iv_project_api/iv_project_api.dart';
 import 'package:iv_project_model/iv_project_model.dart';
 
 class IVCoinRepository {
-  IVCoinRepository({required IVCoinService ivCoinService}) : _ivCoinService = ivCoinService;
-
-  final IVCoinService _ivCoinService;
+  final IVCoinService _ivCoinService = IVCoinService();
 
   Future<IVCoinResponse> getIVCoin() {
     return _ivCoinService.getIVCoin();
