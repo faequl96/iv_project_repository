@@ -21,6 +21,10 @@ class AuthRepository {
     return _authService.createUserWithEmailAndPassword(email, password);
   }
 
+  Future<void> linkingGoogleAndEmail(String email, String password) {
+    return _authService.linkingGoogleAndEmail(email, password);
+  }
+
   Future<void> sendPasswordResetEmail(String email) {
     return _authService.sendPasswordResetEmail(email);
   }

@@ -12,6 +12,10 @@ class VoucherCodeRepository {
     return _voucherCodeService.getVoucherCodeById(id);
   }
 
+  Future<VoucherCodeResponse> getVoucherCodeByName(String name) {
+    return _voucherCodeService.getVoucherCodeByName(name);
+  }
+
   Future<VoucherCodeResponse> updateVoucherCodeById(int id, VoucherCodeRequest request) {
     return _voucherCodeService.updateVoucherCodeById(id, request);
   }

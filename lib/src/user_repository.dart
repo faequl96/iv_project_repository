@@ -12,8 +12,8 @@ class UserRepository {
     return _userService.getUserById(id);
   }
 
-  Future<List<UserResponse>> getUsers() {
-    return _userService.getUsers();
+  Future<List<UserResponse>> getUsers({QueryRequest? query}) {
+    return _userService.getUsers(query: query);
   }
 
   Future<UserResponse> updateUserById(String id, UserRequest request) {
