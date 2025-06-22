@@ -4,11 +4,11 @@ import 'package:iv_project_model/iv_project_model.dart';
 class InvitationDataRepository {
   final InvitationDataService _invitationDataService = InvitationDataService();
 
-  Future<InvitationDataResponse> getInvitationDataById(int id) {
-    return _invitationDataService.getInvitationDataById(id);
+  Future<InvitationDataResponse> getById(int id) {
+    return _invitationDataService.getById(id);
   }
 
-  Future<InvitationDataResponse> updateInvitationDataById(int id, UpdateInvitationDataRequest request) {
-    return _invitationDataService.updateInvitationDataById(id, request);
+  Future<InvitationDataResponse> updateById(int id, UpdateInvitationDataRequest request) {
+    return _invitationDataService.updateById(id, request);
   }
 }

@@ -4,19 +4,19 @@ import 'package:iv_project_model/iv_project_model.dart';
 class UserProfileRepository {
   final UserProfileService _userProfileService = UserProfileService();
 
-  Future<UserProfileResponse> getUserProfile() {
-    return _userProfileService.getUserProfile();
+  Future<UserProfileResponse> get() {
+    return _userProfileService.get();
   }
 
-  Future<UserProfileResponse> getUserProfileById(int id) {
-    return _userProfileService.getUserProfileById(id);
+  Future<UserProfileResponse> getById(int id) {
+    return _userProfileService.getById(id);
   }
 
-  Future<UserProfileResponse> updateUserProfile(UserProfileRequest request) {
-    return _userProfileService.updateUserProfile(request);
+  Future<UserProfileResponse> update(UserProfileRequest request) {
+    return _userProfileService.update(request);
   }
 
-  Future<UserProfileResponse> updateUserProfileById(int id, UserProfileRequest request) {
-    return _userProfileService.updateUserProfileById(id, request);
+  Future<UserProfileResponse> updateById(int id, UserProfileRequest request) {
+    return _userProfileService.updateById(id, request);
   }
 }

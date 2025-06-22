@@ -14,6 +14,7 @@ export 'src/review_repository.dart';
 export 'src/transaction_confirmation_repository.dart';
 export 'src/transaction_payment_repository.dart';
 export 'src/transaction_repository.dart';
+export 'src/transaction_status_repository.dart';
 export 'src/user_profile_repository.dart';
 export 'src/user_repository.dart';
 export 'src/voucher_code_repository.dart';

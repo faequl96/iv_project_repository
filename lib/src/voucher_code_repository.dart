@@ -4,23 +4,27 @@ import 'package:iv_project_model/iv_project_model.dart';
 class VoucherCodeRepository {
   final VoucherCodeService _voucherCodeService = VoucherCodeService();
 
-  Future<VoucherCodeResponse> createVoucherCode(VoucherCodeRequest request) {
-    return _voucherCodeService.createVoucherCode(request);
+  Future<VoucherCodeResponse> create(VoucherCodeRequest request) {
+    return _voucherCodeService.create(request);
   }
 
-  Future<VoucherCodeResponse> getVoucherCodeById(int id) {
-    return _voucherCodeService.getVoucherCodeById(id);
+  Future<VoucherCodeResponse> getById(int id) {
+    return _voucherCodeService.getById(id);
   }
 
-  Future<VoucherCodeResponse> getVoucherCodeByName(String name) {
-    return _voucherCodeService.getVoucherCodeByName(name);
+  Future<VoucherCodeResponse> getByName(String name) {
+    return _voucherCodeService.getByName(name);
   }
 
-  Future<VoucherCodeResponse> updateVoucherCodeById(int id, VoucherCodeRequest request) {
-    return _voucherCodeService.updateVoucherCodeById(id, request);
+  Future<List<VoucherCodeResponse>> gets() {
+    return _voucherCodeService.gets();
   }
 
-  Future<void> deleteVoucherCodeById(int id) {
-    return _voucherCodeService.deleteVoucherCodeById(id);
+  Future<VoucherCodeResponse> updateById(int id, VoucherCodeRequest request) {
+    return _voucherCodeService.updateById(id, request);
+  }
+
+  Future<void> deleteById(int id) {
+    return _voucherCodeService.deleteById(id);
   }
 }

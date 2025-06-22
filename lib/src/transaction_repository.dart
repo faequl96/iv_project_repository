@@ -4,27 +4,31 @@ import 'package:iv_project_model/iv_project_model.dart';
 class TransactionRepository {
   final TransactionService _transactionService = TransactionService();
 
-  Future<TransactionResponse> createTransaction(CreateTransactionRequest request) {
-    return _transactionService.createTransaction(request);
+  Future<TransactionResponse> create(CreateTransactionRequest request) {
+    return _transactionService.create(request);
   }
 
-  Future<TransactionResponse> getTransactionById(int id) {
-    return _transactionService.getTransactionById(id);
+  Future<TransactionResponse> getById(String id) {
+    return _transactionService.getById(id);
   }
 
-  Future<List<TransactionResponse>> getTransactions() {
-    return _transactionService.getTransactions();
+  Future<TransactionResponse> getByReferenceNumber(String referenceNumber) {
+    return _transactionService.getByReferenceNumber(referenceNumber);
   }
 
-  Future<List<TransactionResponse>> getTransactionsByUserId(String userId) {
-    return _transactionService.getTransactionsByUserId(userId);
+  Future<List<TransactionResponse>> gets() {
+    return _transactionService.gets();
   }
 
-  Future<TransactionResponse> updateTransactionById(int id, UpdateTransactionRequest request) {
-    return _transactionService.updateTransactionById(id, request);
+  Future<List<TransactionResponse>> getsByUserId(String userId) {
+    return _transactionService.getsByUserId(userId);
   }
 
-  Future<void> deleteTransactionById(int id) {
-    return _transactionService.deleteTransactionById(id);
+  Future<TransactionResponse> updateById(String id, UpdateTransactionRequest request) {
+    return _transactionService.updateById(id, request);
+  }
+
+  Future<void> deleteById(String id) {
+    return _transactionService.deleteById(id);
   }
 }

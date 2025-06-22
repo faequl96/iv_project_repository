@@ -4,23 +4,23 @@ import 'package:iv_project_model/iv_project_model.dart';
 class CategoryRepository {
   final CategoryService _categoryService = CategoryService();
 
-  Future<CategoryResponse> createCategory(CategoryRequest request) {
-    return _categoryService.createCategory(request);
+  Future<CategoryResponse> create(CategoryRequest request) {
+    return _categoryService.create(request);
   }
 
-  Future<CategoryResponse> getCategoryById(int id) {
-    return _categoryService.getCategoryById(id);
+  Future<CategoryResponse> getById(int id) {
+    return _categoryService.getById(id);
   }
 
-  Future<List<CategoryResponse>> getCategories() {
-    return _categoryService.getCategories();
+  Future<List<CategoryResponse>> gets() {
+    return _categoryService.gets();
   }
 
-  Future<CategoryResponse> updateCategoryById(int id, CategoryRequest request) {
-    return _categoryService.updateCategoryById(id, request);
+  Future<CategoryResponse> updateById(int id, CategoryRequest request) {
+    return _categoryService.updateById(id, request);
   }
 
-  Future<void> deleteCategoryById(int id) {
-    return _categoryService.deleteCategoryById(id);
+  Future<void> deleteById(int id) {
+    return _categoryService.deleteById(id);
   }
 }

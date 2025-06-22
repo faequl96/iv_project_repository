@@ -4,23 +4,23 @@ import 'package:iv_project_model/iv_project_model.dart';
 class IVCoinPackageRepository {
   final IVCoinPackageService _ivCoinPackageService = IVCoinPackageService();
 
-  Future<IVCoinPackageResponse> createIVCoinPackage(CreateIVCoinPackageRequest request) {
-    return _ivCoinPackageService.createIVCoinPackage(request);
+  Future<IVCoinPackageResponse> create(CreateIVCoinPackageRequest request) {
+    return _ivCoinPackageService.create(request);
   }
 
-  Future<IVCoinPackageResponse> getIVCoinPackageById(int id) {
-    return _ivCoinPackageService.getIVCoinPackageById(id);
+  Future<IVCoinPackageResponse> getById(int id) {
+    return _ivCoinPackageService.getById(id);
   }
 
-  Future<List<IVCoinPackageResponse>> getIVCoinPackages() {
-    return _ivCoinPackageService.getIVCoinPackages();
+  Future<List<IVCoinPackageResponse>> gets() {
+    return _ivCoinPackageService.gets();
   }
 
-  Future<IVCoinPackageResponse> updateIVCoinPackageById(int id, UpdateIVCoinPackageRequest request) {
-    return _ivCoinPackageService.updateIVCoinPackageById(id, request);
+  Future<IVCoinPackageResponse> updateById(int id, UpdateIVCoinPackageRequest request) {
+    return _ivCoinPackageService.updateById(id, request);
   }
 
-  Future<void> deleteIVCoinPackageById(int id) {
-    return _ivCoinPackageService.deleteIVCoinPackageById(id);
+  Future<void> deleteById(int id) {
+    return _ivCoinPackageService.deleteById(id);
   }
 }

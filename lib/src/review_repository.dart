@@ -4,27 +4,27 @@ import 'package:iv_project_model/iv_project_model.dart';
 class ReviewRepository {
   final ReviewService _reviewService = ReviewService();
 
-  Future<ReviewResponse> createReview(CreateReviewRequest request) {
-    return _reviewService.createReview(request);
+  Future<ReviewResponse> create(CreateReviewRequest request) {
+    return _reviewService.create(request);
   }
 
-  Future<ReviewResponse> getReviewById(int id) {
-    return _reviewService.getReviewById(id);
+  Future<ReviewResponse> getById(int id) {
+    return _reviewService.getById(id);
   }
 
-  Future<List<ReviewResponse>> getReviews() {
-    return _reviewService.getReviews();
+  Future<List<ReviewResponse>> gets() {
+    return _reviewService.gets();
   }
 
-  Future<List<ReviewResponse>> getReviewsByInvitationThemeId(int invitationThemeId) {
-    return _reviewService.getReviewsByInvitationThemeId(invitationThemeId);
+  Future<List<ReviewResponse>> getsByInvitationThemeId(int invitationThemeId) {
+    return _reviewService.getsByInvitationThemeId(invitationThemeId);
   }
 
-  Future<ReviewResponse> updateReviewById(int id, UpdateReviewRequest request) {
-    return _reviewService.updateReviewById(id, request);
+  Future<ReviewResponse> updateById(int id, UpdateReviewRequest request) {
+    return _reviewService.updateById(id, request);
   }
 
-  Future<void> deleteReviewById(int id) {
-    return _reviewService.deleteReviewById(id);
+  Future<void> deleteById(int id) {
+    return _reviewService.deleteById(id);
   }
 }

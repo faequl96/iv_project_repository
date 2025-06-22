@@ -4,7 +4,7 @@ import 'package:iv_project_model/iv_project_model.dart';
 class TransactionConfirmationRepository {
   final TransactionConfirmationService _transactionConfirmationService = TransactionConfirmationService();
 
-  Future<TransactionResponse> manualByAdminById(int id) {
+  Future<TransactionResponse> manualByAdminById(String id) {
     return _transactionConfirmationService.manualByAdminById(id);
   }
 }

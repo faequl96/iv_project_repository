@@ -4,27 +4,27 @@ import 'package:iv_project_model/iv_project_model.dart';
 class UserRepository {
   final UserService _userService = UserService();
 
-  Future<UserResponse> getUser() {
-    return _userService.getUser();
+  Future<UserResponse> get() {
+    return _userService.get();
   }
 
-  Future<UserResponse> getUserById(String id) {
-    return _userService.getUserById(id);
+  Future<UserResponse> getById(String id) {
+    return _userService.getById(id);
   }
 
-  Future<List<UserResponse>> getUsers({QueryRequest? query}) {
-    return _userService.getUsers(query: query);
+  Future<List<UserResponse>> gets({QueryRequest? query}) {
+    return _userService.gets(query: query);
   }
 
-  Future<UserResponse> updateUserById(String id, UserRequest request) {
-    return _userService.updateUserById(id, request);
+  Future<UserResponse> updateById(String id, UserRequest request) {
+    return _userService.updateById(id, request);
   }
 
-  Future<void> deleteUser() {
-    return _userService.deleteUser();
+  Future<void> delete() {
+    return _userService.delete();
   }
 
-  Future<void> deleteUserById(String id) {
-    return _userService.deleteUserById(id);
+  Future<void> deleteById(String id) {
+    return _userService.deleteById(id);
   }
 }

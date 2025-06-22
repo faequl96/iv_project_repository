@@ -4,23 +4,23 @@ import 'package:iv_project_model/iv_project_model.dart';
 class DiscountCategoryRepository {
   final DiscountCategoryService _discountCategoryService = DiscountCategoryService();
 
-  Future<DiscountCategoryResponse> createDiscountCategory(DiscountCategoryRequest request) {
-    return _discountCategoryService.createDiscountCategory(request);
+  Future<DiscountCategoryResponse> create(DiscountCategoryRequest request) {
+    return _discountCategoryService.create(request);
   }
 
-  Future<DiscountCategoryResponse> getDiscountCategoryById(int id) {
-    return _discountCategoryService.getDiscountCategoryById(id);
+  Future<DiscountCategoryResponse> getById(int id) {
+    return _discountCategoryService.getById(id);
   }
 
-  Future<List<DiscountCategoryResponse>> getDiscountCategories() {
-    return _discountCategoryService.getDiscountCategories();
+  Future<List<DiscountCategoryResponse>> gets() {
+    return _discountCategoryService.gets();
   }
 
-  Future<DiscountCategoryResponse> updateDiscountCategoryById(int id, DiscountCategoryRequest request) {
-    return _discountCategoryService.updateDiscountCategoryById(id, request);
+  Future<DiscountCategoryResponse> updateById(int id, DiscountCategoryRequest request) {
+    return _discountCategoryService.updateById(id, request);
   }
 
-  Future<void> deleteDiscountCategoryById(int id) {
-    return _discountCategoryService.deleteDiscountCategoryById(id);
+  Future<void> deleteById(int id) {
+    return _discountCategoryService.deleteById(id);
   }
 }
