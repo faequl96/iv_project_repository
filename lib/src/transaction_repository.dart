@@ -16,8 +16,8 @@ class TransactionRepository {
     return _transactionService.getByReferenceNumber(referenceNumber);
   }
 
-  Future<List<TransactionResponse>> gets() {
-    return _transactionService.gets();
+  Future<List<TransactionResponse>> gets({QueryRequest? query}) {
+    return _transactionService.gets(query: query);
   }
 
   Future<List<TransactionResponse>> getsByUserId(String userId) {

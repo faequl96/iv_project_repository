@@ -12,8 +12,8 @@ class InvitationThemeRepository {
     return _invitationThemeService.getById(id);
   }
 
-  Future<List<InvitationThemeResponse>> gets() {
-    return _invitationThemeService.gets();
+  Future<List<InvitationThemeResponse>> gets({QueryRequest? query}) {
+    return _invitationThemeService.gets(query: query);
   }
 
   Future<List<InvitationThemeResponse>> getsByCategoryId(int categoryId) {
