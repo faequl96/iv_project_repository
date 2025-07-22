@@ -20,13 +20,13 @@ dependencies:
       url: https://github.com/faequl96/iv_project_model.git
       ref: 0.0.4
 
-  iv_project_api:
-    path: ../iv_project_api
-
   # iv_project_api:
-  #   git:
-  #     url: https://github.com/faequl96/iv_project_api.git
-  #     ref: 0.0.4
+  #   path: ../iv_project_api
+
+  iv_project_api:
+    git:
+      url: https://github.com/faequl96/iv_project_api.git
+      ref: 0.0.5
 
 dev_dependencies:
   flutter_test:
